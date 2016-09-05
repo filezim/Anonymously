@@ -1,10 +1,10 @@
-namespace ElXerath
+namespace AnonymouslyXerath
 {
     using System;
 
     using LeagueSharp.Common;
 
-    public class ElXerathMenu
+    public class AnonymouslyXerathMenu
     {
         #region Static Fields
 
@@ -16,7 +16,7 @@ namespace ElXerath
 
         public static void Initialize()
         {
-            Menu = new Menu("ElXerath", "menu", true);
+            Menu = new Menu("AnonymouslyXerath", "menu", true);
 
             //ElXerath.Orbwalker
             var orbwalkerMenu = new Menu("Orbwalker", "orbwalker");
@@ -29,9 +29,9 @@ namespace ElXerath
             Menu.AddSubMenu(targetSelector);
 
             var cMenu = new Menu("Combo", "Combo");
-            cMenu.AddItem(new MenuItem("ElXerath.Combo.Q", "Use Q").SetValue(true));
-            cMenu.AddItem(new MenuItem("ElXerath.Combo.W", "Use W").SetValue(true));
-            cMenu.AddItem(new MenuItem("ElXerath.Combo.E", "Use E").SetValue(true));
+            cMenu.AddItem(new MenuItem("AnonymouslyXerath.Combo.Q", "Use Q").SetValue(true));
+            cMenu.AddItem(new MenuItem("AnonymouslyXerath.Combo.W", "Use W").SetValue(true));
+            cMenu.AddItem(new MenuItem("AnonymouslyXerath.Combo.E", "Use E").SetValue(true));
             cMenu.AddItem(new MenuItem("ComboActive", "Combo!").SetValue(new KeyBind(32, KeyBindType.Press)));
 
             Menu.AddSubMenu(cMenu);
