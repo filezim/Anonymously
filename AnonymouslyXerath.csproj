@@ -7,8 +7,8 @@
     <ProjectGuid>{B227B6C4-E904-4775-AA18-4F2118C0466C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ElXerath</RootNamespace>
-    <AssemblyName>ElXerath</AssemblyName>
+    <RootNamespace>AnonymouslyXerath</RootNamespace>
+    <AssemblyName>AnonymouslyXerath</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PreBuildEvent />
@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drawings.cs" />
-    <Compile Include="ElXerathMenu.cs" />
+    <Compile Include="AnonymouslyXerathMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Xerath.cs" />
