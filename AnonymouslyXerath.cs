@@ -1,4 +1,4 @@
-namespace ElXerath
+namespace AnonymouslyXerath
 {
     using System;
     using System.Collections.Generic;
@@ -173,10 +173,10 @@ namespace ElXerath
 
         private static void CastR(Obj_AI_Base target)
         {
-            var useR = ElXerathMenu.Menu.Item("ElXerath.R.AutoUseR").IsActive();
-            var tapkey = ElXerathMenu.Menu.Item("ElXerath.R.OnTap").GetValue<KeyBind>().Active;
-            var ultRadius = ElXerathMenu.Menu.Item("ElXerath.R.Radius").GetValue<Slider>().Value;
-            var drawROn = ElXerathMenu.Menu.Item("ElXerath.Draw.RON").IsActive();
+            var useR = ElXerathMenu.Menu.Item("AnonymouslyXerath.R.AutoUseR").IsActive();
+            var tapkey = ElXerathMenu.Menu.Item("AnonymouslyXerath.R.OnTap").GetValue<KeyBind>().Active;
+            var ultRadius = ElXerathMenu.Menu.Item("AnonymouslyXerath.R.Radius").GetValue<Slider>().Value;
+            var drawROn = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.RON").IsActive();
 
             if (!useR)
             {
@@ -188,7 +188,7 @@ namespace ElXerath
                 return;
             }
 
-            var ultType = ElXerathMenu.Menu.Item("ElXerath.R.Mode").GetValue<StringList>().SelectedIndex;
+            var ultType = ElXerathMenu.Menu.Item("AnonymouslyXerath.R.Mode").GetValue<StringList>().SelectedIndex;
 
             if (target.Health - spells[Spells.R].GetDamage(target) < 0)
             {
@@ -261,9 +261,9 @@ namespace ElXerath
                 return;
             }
 
-            var comboQ = ElXerathMenu.Menu.Item("ElXerath.Combo.Q").IsActive();
-            var comboW = ElXerathMenu.Menu.Item("ElXerath.Combo.W").IsActive();
-            var comboE = ElXerathMenu.Menu.Item("ElXerath.Combo.E").IsActive();
+            var comboQ = ElXerathMenu.Menu.Item("AnonymouslyXerath.Combo.Q").IsActive();
+            var comboW = ElXerathMenu.Menu.Item("AnonymouslyXerath.Combo.W").IsActive();
+            var comboE = ElXerathMenu.Menu.Item("AnonymouslyXerath.Combo.E").IsActive();
 
             if (comboE && spells[Spells.E].IsReady() && Player.Distance(target) < spells[Spells.E].Range)
             {
@@ -297,7 +297,7 @@ namespace ElXerath
             }
 
             if (Player.Distance(target) <= 600 && IgniteDamage(target) >= target.Health
-                && ElXerathMenu.Menu.Item("ElXerath.Ignite").IsActive())
+                && ElXerathMenu.Menu.Item("AnonymouslyXerath.Ignite").IsActive())
             {
                 Player.Spellbook.CastSpell(_ignite, target);
             }
@@ -314,7 +314,7 @@ namespace ElXerath
 
         private static HitChance GetHitchance()
         {
-            switch (ElXerathMenu.Menu.Item("ElXerath.hitChance").GetValue<StringList>().SelectedIndex)
+            switch (ElXerathMenu.Menu.Item("AnonymouslyXerath.hitChance").GetValue<StringList>().SelectedIndex)
             {
                 case 0:
                     return HitChance.Low;
@@ -341,8 +341,8 @@ namespace ElXerath
                 return;
             }
 
-            var harassQ = ElXerathMenu.Menu.Item("ElXerath.Harass.Q").IsActive();
-            var harassW = ElXerathMenu.Menu.Item("ElXerath.Harass.W").IsActive();
+            var harassQ = ElXerathMenu.Menu.Item("AnonymouslyXerath.Harass.Q").IsActive();
+            var harassW = ElXerathMenu.Menu.Item("AnonymouslyXerath.Harass.W").IsActive();
 
             if (wTarget != null && harassW && spells[Spells.W].IsReady())
             {
@@ -376,9 +376,9 @@ namespace ElXerath
 
         private static void JungleClear()
         {
-            var clearQ = ElXerathMenu.Menu.Item("ElXerath.jclear.Q").IsActive();
-            var clearW = ElXerathMenu.Menu.Item("ElXerath.jclear.W").IsActive();
-            var clearE = ElXerathMenu.Menu.Item("ElXerath.jclear.E").IsActive();
+            var clearQ = ElXerathMenu.Menu.Item("AnonymouslyXerath.jclear.Q").IsActive();
+            var clearW = ElXerathMenu.Menu.Item("AnonymouslyXerath.jclear.W").IsActive();
+            var clearE = ElXerathMenu.Menu.Item("AnonymouslyXerath.jclear.E").IsActive();
             var minmana = ElXerathMenu.Menu.Item("minmanaclear").GetValue<Slider>().Value;
 
             if (Player.ManaPercent < minmana)
@@ -437,7 +437,7 @@ namespace ElXerath
 
         private static void KsMode()
         {
-            var useKs = ElXerathMenu.Menu.Item("ElXerath.misc.ks").IsActive();
+            var useKs = ElXerathMenu.Menu.Item("AnonymouslyXerath.misc.ks").IsActive();
             if (!useKs)
             {
                 return;
@@ -464,8 +464,8 @@ namespace ElXerath
 
         private static void LaneClear()
         {
-            var clearQ = ElXerathMenu.Menu.Item("ElXerath.clear.Q").IsActive();
-            var clearW = ElXerathMenu.Menu.Item("ElXerath.clear.W").IsActive();
+            var clearQ = ElXerathMenu.Menu.Item("AnonymouslyXerath.clear.Q").IsActive();
+            var clearW = ElXerathMenu.Menu.Item("AnonymouslyXerath.clear.W").IsActive();
             var minmana = ElXerathMenu.Menu.Item("minmanaclear").GetValue<Slider>().Value;
 
             if (Player.ManaPercent < minmana)
@@ -505,7 +505,7 @@ namespace ElXerath
 
         private static void Obj_AI_Hero_OnIssueOrder(Obj_AI_Base sender, GameObjectIssueOrderEventArgs args)
         {
-            var blockMovement = ElXerathMenu.Menu.Item("ElXerath.R.Block").IsActive();
+            var blockMovement = ElXerathMenu.Menu.Item("AnonymouslyXerath.R.Block").IsActive();
             if (CastingR && blockMovement)
             {
                 args.Process = false;
@@ -557,7 +557,7 @@ namespace ElXerath
                     break;
             }
 
-            var showNotifications = ElXerathMenu.Menu.Item("ElXerath.misc.Notifications").GetValue<bool>();
+            var showNotifications = ElXerathMenu.Menu.Item("AnonymouslyXerath.misc.Notifications").GetValue<bool>();
 
             if (spells[Spells.R].IsReady() && showNotifications && Environment.TickCount - lastNotification > 5000)
             {
@@ -580,7 +580,7 @@ namespace ElXerath
 
             if (spells[Spells.E].IsReady())
             {
-                var useE = ElXerathMenu.Menu.Item("ElXerath.Misc.E").GetValue<KeyBind>().Active;
+                var useE = ElXerathMenu.Menu.Item("AnonymouslyXerath.Misc.E").GetValue<KeyBind>().Active;
                 var eTarget = TargetSelector.GetTarget(spells[Spells.E].Range, TargetSelector.DamageType.Magical);
 
                 if (useE)
