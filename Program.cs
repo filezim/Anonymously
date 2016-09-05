@@ -1,4 +1,4 @@
-namespace ElXerath
+namespace AnonymouslyXerath
 {
     using LeagueSharp.Common;
 
