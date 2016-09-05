@@ -56,7 +56,7 @@ namespace AnonymouslyXerath
                   
             }
 
-            rMenu.AddItem(new MenuItem("ElXerath.R.Radius", "Target radius").SetValue(new Slider(700, 1500, 300)));
+            rMenu.AddItem(new MenuItem("AnonymouslyXerath.R.Radius", "Target radius").SetValue(new Slider(700, 1500, 300)));
 
             Menu.AddSubMenu(rMenu);
 
