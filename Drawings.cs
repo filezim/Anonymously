@@ -13,13 +13,13 @@ namespace AnonymouslyXerath
 
         public static void Drawing_OnDraw(EventArgs args)
         {
-            var drawOff = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.off").GetValue<bool>();
-            var drawQ = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.Q").GetValue<Circle>();
-            var drawW = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.W").GetValue<Circle>();
-            var drawE = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.E").GetValue<Circle>();
-            var drawR = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.R").GetValue<Circle>();
-            var drawText = ElXerathMenu.Menu.Item("AnonymouslyXerath.Draw.Text").GetValue<bool>();
-            var rBool = ElXerathMenu.Menu.Item("AnonymouslyXerath.AutoHarass").GetValue<KeyBind>().Active;
+            var drawOff = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.off").GetValue<bool>();
+            var drawQ = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.Q").GetValue<Circle>();
+            var drawW = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.W").GetValue<Circle>();
+            var drawE = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.E").GetValue<Circle>();
+            var drawR = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.R").GetValue<Circle>();
+            var drawText = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.Draw.Text").GetValue<bool>();
+            var rBool = AnonymouslyXerathMenu.Menu.Item("AnonymouslyXerath.AutoHarass").GetValue<KeyBind>().Active;
 
             if (drawOff)
             {
