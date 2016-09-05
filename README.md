@@ -1,3 +1,3 @@
 # Anonymously
 
-//Phase beta testing, accept constructive criticism
+//accepting constructive criticism, negative commits will be ignored.
