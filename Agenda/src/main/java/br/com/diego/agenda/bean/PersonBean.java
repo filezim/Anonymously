@@ -1,4 +1,4 @@
-package br.com.diego.agenda.bean;
+package br.com.carlos.agenda.bean;
 
 import java.io.Serializable;
 
