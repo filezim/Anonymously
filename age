@@ -1,0 +1,37 @@
+Criando um projeto JAVA web com maven
+
+file > new > Maven Project
+
+[x] Create a simple project;
+[x] Use default Workspace location;
+
+Group id: br.com.diego.mercado
+Artifact id: Mercado
+Version: 1.0
+Packaging: war  #jar(desktop) e war(web)
+
+Tudo que é baixado pelo maven é salvo dentro .m2 diretório oculto em /home/diego
+
+adicionar os parametros de configuração no pom.xml
+
+acessar src > main > webapp e criar o diretório WEB-INF
+dentro de WEB-INF criar o arquivo web.xml
+
+rodar o maven clean:
+
+botão direito > run as > maven clean
+
+add hibernate
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-core</artifactId>
+   <version>5.2.10.Final</version>
+</dependency>
+
+docs.jboss.org/hibernate/orm/4.3/manual/en-US/html_single/
+
+maven.apache.org
+
+com.mysql.jdbc.Driver
+
+org.hibernate.dialect.MySQL5InnoDBDialect

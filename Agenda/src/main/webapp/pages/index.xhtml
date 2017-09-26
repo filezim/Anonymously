@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Pessoa</title>
+</h:head>
+<h:body>
+	<p:growl id="message" />
+
+	<h:form>
+		<p:panel header="Pessoa - Listagem">
+			<p:dataTable emptyMessage="Nenhum registro encontrado."
+				paginator="true">
+				<f:facet name="header">
+					<p:commandButton value="Novo" oncomplete="PF('dialogo').show();"
+						actionListener="#{personBean.news}"
+						update=":formPerson:painelPerson" />
+				</f:facet>
+
+				<p:column headerText="Nome">
+				</p:column>
+
+				<p:column headerText="CPF">
+				</p:column>
+
+				<p:column headerText="ESTADO">
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+
+	<p:dialog header="Pessoa - Cadastro" widgetVar="dialogo"
+		draggable="false" resizable="false" modal="true" closable="false">
+		<h:form id="formPerson">
+			<h:panelGrid id="painelPerson" columns="2">
+				<p:outputLabel value="Nome:" />
+				<p:inputText maxlength="50" size="30"
+					value="#{personBean.person.name}" />
+
+				<p:outputLabel value="CPF:" />
+				<p:inputText maxlength="20" size="10"
+					value="#{personBean.person.cpf}" />
+
+				<p:outputLabel value="Estado:" />
+				<p:inputText maxlength="20" size="30"
+					value="#{personBean.person.city}" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="2">
+				<p:commandButton value="Salvar" actionListener="#{personBean.save}"
+					update=":message" />
+				<p:commandButton value="Fechar" oncomplete="PF('dialogo').hide();" />
+			</h:panelGrid>
+		</h:form>
+	</p:dialog>
+</h:body>
+</html>
